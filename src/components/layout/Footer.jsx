@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, ChevronRight } from 'lucide-react';
+import { MapPin, Phone, Mail, ChevronRight, User } from 'lucide-react';
 import { FacebookIcon, InstagramIcon, LinkedinIcon } from '../common/SocialIcons';
 
   const Footer = ({ setActivePage, onOpenConsultation }) => {
@@ -136,12 +136,16 @@ import { FacebookIcon, InstagramIcon, LinkedinIcon } from '../common/SocialIcons
               <h4 className="footer-column-title">Get in Touch</h4>
               <div className="footer-contact-list">
                 <div className="footer-contact-item">
+                  <User className="footer-contact-icon" />
+                  <span style={{ fontWeight: '600', color: '#f8fafc' }}>Ramineni Krishna Prasad</span>
+                </div>
+                <div className="footer-contact-item">
                   <Phone className="footer-contact-icon" />
-                  <span>+91 7013334673</span>
+                  <a href="tel:+918374415339" style={{ color: 'inherit', textDecoration: 'none' }}>+91 83744 15339</a>
                 </div>
                 <div className="footer-contact-item">
                   <Mail className="footer-contact-icon" />
-                  <span>info@ramineniconstructions.in</span>
+                  <a href="mailto:info@ramineniconstructions.in" style={{ color: 'inherit', textDecoration: 'none' }}>info@ramineniconstructions.in</a>
                 </div>
                 <div className="footer-contact-item">
                   <MapPin className="footer-contact-icon" />

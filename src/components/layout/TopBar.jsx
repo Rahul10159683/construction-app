@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, User } from 'lucide-react';
 import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from '../common/SocialIcons';
 
 const TopBar = () => {
@@ -7,24 +7,18 @@ const TopBar = () => {
     <div className="top-bar">
       <div className="container-wide top-bar-inner">
         <div className="top-bar-left">
-          <a
-            href="https://maps.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="top-bar-item"
-            title="Office Location"
-          >
-            <MapPin className="top-bar-icon" />
-            <span>Hyderabad, Telangana</span>
-          </a>
+          <div className="top-bar-item" title="Contact Person">
+            <User className="top-bar-icon" />
+            <span>Ramineni Krishna Prasad</span>
+          </div>
 
           <a
-            href="tel:+919876543210"
+            href="tel:+918374415339"
             className="top-bar-item"
             title="Call Us"
           >
             <Phone className="top-bar-icon" />
-            <span>+91  7013334673</span>
+            <span>+91 83744 15339</span>
           </a>
 
           <a
@@ -34,6 +28,17 @@ const TopBar = () => {
           >
             <Mail className="top-bar-icon" />
             <span>info@ramineniconstructions.in</span>
+          </a>
+
+          <a
+            href="https://maps.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="top-bar-item"
+            title="Office Location"
+          >
+            <MapPin className="top-bar-icon" />
+            <span>Hyderabad, Telangana</span>
           </a>
         </div>
 

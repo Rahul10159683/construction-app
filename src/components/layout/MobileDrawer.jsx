@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, ChevronRight, Phone, Mail, MapPin } from 'lucide-react';
+import { X, ChevronRight, Phone, Mail, MapPin, User } from 'lucide-react';
 
   const MobileDrawer = ({ isOpen, onClose, activePage, setActivePage, onOpenConsultation }) => {
     const navItems = [
@@ -77,12 +77,16 @@ import { X, ChevronRight, Phone, Mail, MapPin } from 'lucide-react';
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '6px' }}>
               <div className="mobile-contact-item">
+                <User size={14} color="#d97706" />
+                <span style={{ fontWeight: '600', color: '#0f172a' }}>Ramineni Krishna Prasad</span>
+              </div>
+              <div className="mobile-contact-item">
                 <Phone size={14} color="#d97706" />
-                <span>+91 7013334673</span>
+                <a href="tel:+918374415339" style={{ color: 'inherit', textDecoration: 'none' }}>+91 83744 15339</a>
               </div>
               <div className="mobile-contact-item">
                 <Mail size={14} color="#d97706" />
-                <span>info@ramineniconstructions.in</span>
+                <a href="mailto:info@ramineniconstructions.in" style={{ color: 'inherit', textDecoration: 'none' }}>info@ramineniconstructions.in</a>
               </div>
               <div className="mobile-contact-item">
                 <MapPin size={14} color="#d97706" />

@@ -93,7 +93,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
                     type="tel"
                     name="phone"
                     required
-                    placeholder="+91 98765 00000"
+                    placeholder="+91 83744 15339"
                     className="form-control"
                     value={formData.phone}
                     onChange={handleChange}

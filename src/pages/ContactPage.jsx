@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PageHero from '../components/common/PageHero';
 import CtaBanner from '../components/home/CtaBanner';
 import { faqData } from '../data/faqData';
-import { MapPin, Phone, Mail, Clock, Send, ChevronDown, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ChevronDown, CheckCircle2, User } from 'lucide-react';
 
 const ContactPage = ({ setActivePage, onOpenQuote }) => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -67,13 +67,26 @@ const ContactPage = ({ setActivePage, onOpenQuote }) => {
 
                 <div className="contact-card">
                   <div className="contact-icon-wrap">
+                    <User size={22} />
+                  </div>
+                  <div>
+                    <h4 className="contact-card-title">Key Contact Person</h4>
+                    <p className="contact-card-text">
+                      <strong style={{ fontSize: '15px', color: '#0b1727' }}>Ramineni Krishna Prasad</strong><br />
+                      Founder & Managing Director
+                    </p>
+                  </div>
+                </div>
+
+                <div className="contact-card">
+                  <div className="contact-icon-wrap">
                     <Phone size={22} />
                   </div>
                   <div>
                     <h4 className="contact-card-title">Phone & WhatsApp</h4>
                     <p className="contact-card-text">
-                      <strong>Direct:</strong> +91 7013334673<br />
-                      <strong>Office:</strong> +91 xxxxxxxx
+                      <strong>Direct Call:</strong> <a href="tel:+918374415339" style={{ color: 'inherit', textDecoration: 'none' }}>+91 83744 15339</a><br />
+                      <strong>WhatsApp:</strong> <a href="https://wa.me/918374415339" target="_blank" rel="noopener noreferrer" style={{ color: '#d97706', textDecoration: 'none', fontWeight: '600' }}>+91 83744 15339</a>
                     </p>
                   </div>
                 </div>
@@ -147,7 +160,7 @@ const ContactPage = ({ setActivePage, onOpenQuote }) => {
                           type="tel"
                           name="phone"
                           required
-                          placeholder="+91 98765 00000"
+                          placeholder="+91 83744 15339"
                           className="form-control"
                           value={formData.phone}
                           onChange={handleChange}

@@ -1,6 +1,6 @@
 export const teamData = [
   {
-    name: "Ramineni Venkata Krishna",
+    name: "Ramineni Krishna Prasad",
     role: "Founder & Managing Director",
     experience: "Founder",
     bio: "Founded Ramineni Constructions with a clear vision: establishing a forward-thinking construction brand anchored in absolute transparency, modern civil engineering, and client-first commitment.",
