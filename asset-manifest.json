@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ramineni/static/css/main.be0621a7.css",
-    "main.js": "/ramineni/static/js/main.c739f630.js",
-    "static/js/453.0ef5497d.chunk.js": "/ramineni/static/js/453.0ef5497d.chunk.js",
-    "index.html": "/ramineni/index.html",
-    "main.be0621a7.css.map": "/ramineni/static/css/main.be0621a7.css.map",
-    "main.c739f630.js.map": "/ramineni/static/js/main.c739f630.js.map",
-    "453.0ef5497d.chunk.js.map": "/ramineni/static/js/453.0ef5497d.chunk.js.map"
+    "main.css": "/construction-app/static/css/main.be0621a7.css",
+    "main.js": "/construction-app/static/js/main.99017550.js",
+    "static/js/453.0ef5497d.chunk.js": "/construction-app/static/js/453.0ef5497d.chunk.js",
+    "index.html": "/construction-app/index.html",
+    "main.be0621a7.css.map": "/construction-app/static/css/main.be0621a7.css.map",
+    "main.99017550.js.map": "/construction-app/static/js/main.99017550.js.map",
+    "453.0ef5497d.chunk.js.map": "/construction-app/static/js/453.0ef5497d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.be0621a7.css",
-    "static/js/main.c739f630.js"
+    "static/js/main.99017550.js"
   ]
 }
