@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ramineni Constructions | Building Trust. Creating Spaces.</title>
+    <script type="text/javascript">
+      // Single Page App redirect for GitHub Pages
+      // Encodes path into query string so index.html can restore the route
+      var segmentCount = 1;
+      var loc = window.location;
+      loc.replace(
+        loc.protocol + '//' + loc.hostname + (loc.port ? ':' + loc.port : '') +
+        loc.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
+        loc.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+        (loc.search ? '&' + loc.search.slice(1).replace(/&/g, '~and~') : '') +
+        loc.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

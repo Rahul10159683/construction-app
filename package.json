@@ -2,7 +2,7 @@
   "name": "construction-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": " /ramineni",
+  "homepage": "https://rahul10159683.github.io/construction-app",
   "dependencies": {
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^6.9.1",
