@@ -27,12 +27,11 @@ const Header = ({ activePage, setActivePage, onOpenConsultation, onOpenMobileMen
 
   const handleNavClick = (pageId) => {
     setActivePage(pageId);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="container header-inner">
+      <div className="container-wide header-inner">
         {/* Brand Logo */}
         <div
           className="brand-logo-link"
@@ -42,10 +41,17 @@ const Header = ({ activePage, setActivePage, onOpenConsultation, onOpenMobileMen
         >
           {!logoError ? (
             <img
-              src="/Ramineni_logo.png"
+              src={`${process.env.PUBLIC_URL || ''}/Ramineni_logo_horizontal.png`}
               alt="Ramineni Constructions"
               className="brand-logo-img"
-              onError={() => setLogoError(true)}
+              onError={(e) => {
+                if (!e.currentTarget.dataset.retried) {
+                  e.currentTarget.dataset.retried = 'true';
+                  e.currentTarget.src = '/Ramineni_logo_horizontal.png';
+                  return;
+                }
+                setLogoError(true);
+              }}
             />
           ) : (
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>

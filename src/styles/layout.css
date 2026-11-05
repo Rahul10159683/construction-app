@@ -4,8 +4,17 @@
   max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: clamp(16px, 2.6vw, 44px);
+  padding-right: clamp(16px, 2.6vw, 44px);
+}
+
+.container-wide {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(18px, 2.8vw, 48px);
+  padding-right: clamp(18px, 2.8vw, 48px);
 }
 
 /* App Wrapper */
@@ -108,7 +117,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 84px;
+  height: clamp(82px, 5.2vw, 92px);
 }
 
 .brand-logo-link {
@@ -116,12 +125,17 @@
   align-items: center;
   text-decoration: none;
   cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo-link:hover {
+  transform: scale(1.015);
 }
 
 .brand-logo-img {
-  height: 52px;
+  height: clamp(54px, 3.8vw, 68px);
   width: auto;
-  max-width: 220px;
+  max-width: clamp(260px, 18vw, 330px);
   object-fit: contain;
   display: block;
 }
@@ -130,7 +144,7 @@
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: clamp(24px, 2.2vw, 42px);
 }
 
 .nav-link {
@@ -330,11 +344,11 @@
 }
 
 .footer-logo-img {
-  height: 54px;
+  height: clamp(52px, 3.4vw, 64px);
   width: auto;
-  max-width: 220px;
+  max-width: clamp(250px, 16vw, 310px);
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  display: block;
 }
 
 .footer-desc {

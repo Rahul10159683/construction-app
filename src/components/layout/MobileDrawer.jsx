@@ -29,10 +29,15 @@ import { X, ChevronRight, Phone, Mail, MapPin } from 'lucide-react';
         <aside className={`mobile-drawer ${isOpen ? 'open' : ''}`} aria-label="Mobile Navigation">
           <div className="mobile-drawer-header">
             <img
-              src="/Ramineni_logo.png"
+              src={`${process.env.PUBLIC_URL || ''}/Ramineni_logo_horizontal.png`}
               alt="Ramineni Constructions"
-              style={{ height: '38px', width: 'auto', objectFit: 'contain' }}
+              style={{ height: '44px', width: 'auto', maxWidth: '210px', objectFit: 'contain' }}
               onError={(e) => {
+                if (!e.currentTarget.dataset.retried) {
+                  e.currentTarget.dataset.retried = 'true';
+                  e.currentTarget.src = '/Ramineni_logo_horizontal.png';
+                  return;
+                }
                 e.currentTarget.style.display = 'none';
               }}
             />

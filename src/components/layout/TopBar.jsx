@@ -5,7 +5,7 @@ import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from '../commo
 const TopBar = () => {
   return (
     <div className="top-bar">
-      <div className="container top-bar-inner">
+      <div className="container-wide top-bar-inner">
         <div className="top-bar-left">
           <a
             href="https://maps.google.com"

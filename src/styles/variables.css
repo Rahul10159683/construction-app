@@ -44,11 +44,44 @@
   --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Layout container */
-  --container-max: 1280px;
+  /* Layout container - dynamically responsive to screen widths without wasting space */
+  --container-max: min(92vw, 1380px);
+  --container-wide: min(95vw, 1520px);
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-full: 9999px;
+}
+
+/* Medium Desktop (1366px+) */
+@media (min-width: 1366px) {
+  :root {
+    --container-max: min(92vw, 1540px);
+    --container-wide: min(95vw, 1680px);
+  }
+}
+
+/* Standard Large Desktop & 1080p Monitors (1600px - 1920px) */
+@media (min-width: 1600px) {
+  :root {
+    --container-max: min(91vw, 1720px);
+    --container-wide: min(95vw, 1840px);
+  }
+}
+
+/* Wide & Full HD 1920px Monitors (No wasted margin space) */
+@media (min-width: 1900px) {
+  :root {
+    --container-max: min(90vw, 1800px);
+    --container-wide: min(94vw, 1960px);
+  }
+}
+
+/* Ultrawide & 2K / 4K Monitors (2560px+) */
+@media (min-width: 2500px) {
+  :root {
+    --container-max: min(86vw, 2160px);
+    --container-wide: min(92vw, 2380px);
+  }
 }
 

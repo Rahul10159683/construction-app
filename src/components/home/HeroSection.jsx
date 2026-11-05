@@ -39,13 +39,13 @@ const HeroSection = ({ onNavigateServices, onNavigateContact }) => {
           {/* Right Hero Image: Construction Site with Tower Crane at Sunset */}
           <div className="hero-image-wrapper">
             <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
+              src={`${process.env.PUBLIC_URL || ''}/construction-site.svg`}
               alt="Ramineni Constructions - Building Tomorrow's Landmarks"
               className="hero-image"
               loading="eager"
               onError={(e) => {
                 e.currentTarget.onerror = null;
-                e.currentTarget.src = '/construction-site.svg';
+                e.currentTarget.src = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80';
               }}
             />
           </div>

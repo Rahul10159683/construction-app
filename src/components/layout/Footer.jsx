@@ -12,16 +12,23 @@ import { FacebookIcon, InstagramIcon, LinkedinIcon } from '../common/SocialIcons
 
     return (
       <footer className="site-footer">
-        <div className="container footer-top">
+        <div className="container-wide footer-top">
           <div className="footer-grid">
             {/* Column 1: Brand */}
             <div className="footer-brand">
               {!logoError ? (
                 <img
-                  src="/Ramineni_logo.png"
+                  src={`${process.env.PUBLIC_URL || ''}/Ramineni_logo_horizontal_white.png`}
                   alt="Ramineni Constructions"
                   className="footer-logo-img"
-                  onError={() => setLogoError(true)}
+                  onError={(e) => {
+                    if (!e.currentTarget.dataset.retried) {
+                      e.currentTarget.dataset.retried = 'true';
+                      e.currentTarget.src = '/Ramineni_logo_horizontal_white.png';
+                      return;
+                    }
+                    setLogoError(true);
+                  }}
                 />
               ) : (
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -159,7 +166,7 @@ import { FacebookIcon, InstagramIcon, LinkedinIcon } from '../common/SocialIcons
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <div className="container footer-bottom-inner">
+          <div className="container-wide footer-bottom-inner">
             <div>
               © 2026 Ramineni Constructions. All rights reserved.
             </div>

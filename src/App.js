@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import TopBar from './components/layout/TopBar';
 import Header from './components/layout/Header';
 import MobileDrawer from './components/layout/MobileDrawer';
@@ -13,29 +14,38 @@ import FutureProjectsPage from './pages/FutureProjectsPage';
 import ContactPage from './pages/ContactPage';
 
 function App() {
-  const [activePage, setActivePage] = useState('home');
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
-  // Sync with URL Hash for seamless back/forward navigation
+  // Derive active page directly from current route pathname
+  const getActivePage = (pathname) => {
+    if (pathname.startsWith('/about')) return 'about';
+    if (pathname.startsWith('/services')) return 'services';
+    if (pathname.startsWith('/future-projects')) return 'future-projects';
+    if (pathname.startsWith('/contact')) return 'contact';
+    return 'home';
+  };
+
+  const activePage = getActivePage(location.pathname);
+
+  // Automatically scroll to top on every route change
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '').toLowerCase();
-      const validPages = ['home', 'about', 'services', 'future-projects', 'contact'];
-      if (validPages.includes(hash)) {
-        setActivePage(hash);
-      }
-    };
-
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
-  const navigateToPage = (pageId) => {
-    setActivePage(pageId);
-    window.location.hash = pageId === 'home' ? '' : pageId;
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+
+  // Clean route-based navigation (no hash / # in URL)
+  const navigateToPage = (pageId) => {
+    const routeMap = {
+      home: '/',
+      about: '/about',
+      services: '/services',
+      'future-projects': '/future-projects',
+      contact: '/contact',
+    };
+    const targetRoute = routeMap[pageId] || '/';
+    navigate(targetRoute);
   };
 
   return (
@@ -60,42 +70,57 @@ function App() {
         onOpenConsultation={() => setIsConsultationModalOpen(true)}
       />
 
-      {/* Dynamic Page Views */}
+      {/* Route-Based Page Navigation (Base path /ramireddy) */}
       <main className="main-content">
-        {activePage === 'home' && (
-          <HomePage
-            setActivePage={navigateToPage}
-            onOpenConsultation={() => setIsConsultationModalOpen(true)}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                setActivePage={navigateToPage}
+                onOpenConsultation={() => setIsConsultationModalOpen(true)}
+              />
+            }
           />
-        )}
-
-        {activePage === 'about' && (
-          <AboutPage
-            setActivePage={navigateToPage}
-            onOpenConsultation={() => setIsConsultationModalOpen(true)}
+          <Route
+            path="/about"
+            element={
+              <AboutPage
+                setActivePage={navigateToPage}
+                onOpenConsultation={() => setIsConsultationModalOpen(true)}
+              />
+            }
           />
-        )}
-
-        {activePage === 'services' && (
-          <ServicesPage
-            setActivePage={navigateToPage}
-            onOpenConsultation={() => setIsConsultationModalOpen(true)}
+          <Route
+            path="/services"
+            element={
+              <ServicesPage
+                setActivePage={navigateToPage}
+                onOpenConsultation={() => setIsConsultationModalOpen(true)}
+              />
+            }
           />
-        )}
-
-        {activePage === 'future-projects' && (
-          <FutureProjectsPage
-            setActivePage={navigateToPage}
-            onOpenConsultation={() => setIsConsultationModalOpen(true)}
+          <Route
+            path="/future-projects"
+            element={
+              <FutureProjectsPage
+                setActivePage={navigateToPage}
+                onOpenConsultation={() => setIsConsultationModalOpen(true)}
+              />
+            }
           />
-        )}
-
-        {activePage === 'contact' && (
-          <ContactPage
-            setActivePage={navigateToPage}
-            onOpenQuote={() => setIsConsultationModalOpen(true)}
+          <Route
+            path="/contact"
+            element={
+              <ContactPage
+                setActivePage={navigateToPage}
+                onOpenQuote={() => setIsConsultationModalOpen(true)}
+              />
+            }
           />
-        )}
+          {/* Catch-all redirect to base home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
 
       {/* Comprehensive Dark Footer */}
