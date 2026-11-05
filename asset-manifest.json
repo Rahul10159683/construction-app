@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ramireddy/static/css/main.be0621a7.css",
-    "main.js": "/ramireddy/static/js/main.0f39ce23.js",
-    "static/js/453.0ef5497d.chunk.js": "/ramireddy/static/js/453.0ef5497d.chunk.js",
-    "index.html": "/ramireddy/index.html",
-    "main.be0621a7.css.map": "/ramireddy/static/css/main.be0621a7.css.map",
-    "main.0f39ce23.js.map": "/ramireddy/static/js/main.0f39ce23.js.map",
-    "453.0ef5497d.chunk.js.map": "/ramireddy/static/js/453.0ef5497d.chunk.js.map"
+    "main.css": "/ramineni/static/css/main.be0621a7.css",
+    "main.js": "/ramineni/static/js/main.c739f630.js",
+    "static/js/453.0ef5497d.chunk.js": "/ramineni/static/js/453.0ef5497d.chunk.js",
+    "index.html": "/ramineni/index.html",
+    "main.be0621a7.css.map": "/ramineni/static/css/main.be0621a7.css.map",
+    "main.c739f630.js.map": "/ramineni/static/js/main.c739f630.js.map",
+    "453.0ef5497d.chunk.js.map": "/ramineni/static/js/453.0ef5497d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.be0621a7.css",
-    "static/js/main.0f39ce23.js"
+    "static/js/main.c739f630.js"
   ]
 }
