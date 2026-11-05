@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <!-- Sky Gradient: Warm golden sunset to twilight blue -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a3f5f"/>
+      <stop offset="35%" stop-color="#4a5d7c"/>
+      <stop offset="60%" stop-color="#b46a55"/>
+      <stop offset="85%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <!-- Sun Glow -->
+    <radialGradient id="sunGlow" cx="70%" cy="85%" r="45%">
+      <stop offset="0%" stop-color="#fffbeb" stop-opacity="0.95"/>
+      <stop offset="25%" stop-color="#fde68a" stop-opacity="0.75"/>
+      <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Concrete Beam Gradient -->
+    <linearGradient id="concreteGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+
+    <!-- Yellow Crane Steel -->
+    <linearGradient id="craneSteel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+
+    <!-- Warm Highlight -->
+    <linearGradient id="warmSunlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Sky -->
+  <rect width="800" height="600" fill="url(#skyGrad)"/>
+
+  <!-- Glowing Sun on Horizon -->
+  <circle cx="580" cy="460" r="160" fill="url(#sunGlow)"/>
+  <circle cx="580" cy="460" r="45" fill="#fff" opacity="0.85"/>
+
+  <!-- Distant City Silhouette -->
+  <path d="M 0 540 L 40 540 L 40 510 L 80 510 L 80 540 L 140 540 L 140 480 L 170 480 L 170 540 L 220 540 L 220 520 L 260 520 L 260 540 L 320 540 L 320 490 L 350 490 L 350 540 L 800 540 L 800 600 L 0 600 Z" fill="#1e2430" opacity="0.6"/>
+
+  <!-- ================= TOWER CRANE ================= -->
+  <!-- Crane Tower Vertical Mast (Yellow lattice steel) -->
+  <g id="crane">
+    <!-- Mast Verticals -->
+    <line x1="520" y1="210" x2="520" y2="480" stroke="url(#craneSteel)" stroke-width="4"/>
+    <line x1="538" y1="210" x2="538" y2="480" stroke="url(#craneSteel)" stroke-width="4"/>
+    
+    <!-- Mast Cross Bracing -->
+    <line x1="520" y1="230" x2="538" y2="250" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="230" x2="520" y2="250" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="520" y1="250" x2="538" y2="270" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="250" x2="520" y2="270" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="520" y1="270" x2="538" y2="290" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="270" x2="520" y2="290" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="520" y1="290" x2="538" y2="310" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="290" x2="520" y2="310" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="520" y1="310" x2="538" y2="330" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="310" x2="520" y2="330" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="520" y1="330" x2="538" y2="350" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="330" x2="520" y2="350" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="520" y1="350" x2="538" y2="370" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="350" x2="520" y2="370" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="520" y1="370" x2="538" y2="390" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="370" x2="520" y2="390" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="520" y1="390" x2="538" y2="410" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="390" x2="520" y2="410" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="520" y1="410" x2="538" y2="430" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="410" x2="520" y2="430" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="520" y1="430" x2="538" y2="450" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="538" y1="430" x2="520" y2="450" stroke="#f59e0b" stroke-width="2"/>
+
+    <!-- Operator Cabin -->
+    <rect x="515" y="195" width="28" height="24" fill="#0f172a" rx="3"/>
+    <rect x="522" y="200" width="16" height="14" fill="#67e8f9" opacity="0.8"/>
+
+    <!-- Crane Tower Peak (Apex) -->
+    <polygon points="529,145 518,195 540,195" fill="url(#craneSteel)"/>
+
+    <!-- Horizontal Jib Boom (Main working arm reaching left over building) -->
+    <line x1="180" y1="195" x2="529" y2="195" stroke="url(#craneSteel)" stroke-width="4"/>
+    <line x1="200" y1="183" x2="529" y2="183" stroke="url(#craneSteel)" stroke-width="3"/>
+    
+    <!-- Jib Lattice Bracing -->
+    <line x1="200" y1="183" x2="220" y2="195" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="220" y1="195" x2="240" y2="183" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="240" y1="183" x2="260" y2="195" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="260" y1="195" x2="280" y2="183" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="280" y1="183" x2="300" y2="195" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="300" y1="195" x2="320" y2="183" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="320" y1="183" x2="340" y2="195" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="340" y1="195" x2="360" y2="183" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="360" y1="183" x2="380" y2="195" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="380" y1="195" x2="400" y2="183" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="400" y1="183" x2="420" y2="195" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="420" y1="195" x2="440" y2="183" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="440" y1="183" x2="460" y2="195" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="460" y1="195" x2="480" y2="183" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="480" y1="183" x2="500" y2="195" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="500" y1="195" x2="520" y2="183" stroke="#f59e0b" stroke-width="1.8"/>
+
+    <!-- Counter Jib (Rear arm with counterweights) -->
+    <line x1="529" y1="195" x2="630" y2="195" stroke="url(#craneSteel)" stroke-width="4"/>
+    <rect x="585" y="196" width="38" height="18" fill="#475569" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Tension Pendants / Cables -->
+    <line x1="529" y1="145" x2="260" y2="183" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="529" y1="145" x2="400" y2="183" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="529" y1="145" x2="615" y2="195" stroke="#94a3b8" stroke-width="1.5"/>
+
+    <!-- Hoist Trolley & Hook Cable -->
+    <rect x="310" y="195" width="16" height="8" fill="#0f172a"/>
+    <line x1="318" y1="203" x2="318" y2="280" stroke="#0f172a" stroke-width="1.5"/>
+    <!-- Concrete Bucket / Hook -->
+    <polygon points="312,280 324,280 321,294 315,294" fill="#e2e8f0"/>
+  </g>
+
+  <!-- ================= REINFORCED CONCRETE BUILDING FRAME ================= -->
+  <!-- 5-Story Concrete Structure (Under Construction) -->
+  <g id="building">
+    <!-- Slab 5 (Roof deck with rebar starter bars) -->
+    <rect x="60" y="240" width="410" height="14" fill="url(#concreteGrad)"/>
+    <!-- Rebar sticking out on top slab -->
+    <g stroke="#94a3b8" stroke-width="1.5">
+      <line x1="85" y1="225" x2="85" y2="240"/>
+      <line x1="90" y1="222" x2="90" y2="240"/>
+      <line x1="95" y1="225" x2="95" y2="240"/>
+
+      <line x1="160" y1="225" x2="160" y2="240"/>
+      <line x1="165" y1="220" x2="165" y2="240"/>
+      <line x1="170" y1="225" x2="170" y2="240"/>
+
+      <line x1="240" y1="225" x2="240" y2="240"/>
+      <line x1="245" y1="222" x2="245" y2="240"/>
+      <line x1="250" y1="225" x2="250" y2="240"/>
+
+      <line x1="320" y1="225" x2="320" y2="240"/>
+      <line x1="325" y1="220" x2="325" y2="240"/>
+      <line x1="330" y1="225" x2="330" y2="240"/>
+
+      <line x1="400" y1="225" x2="400" y2="240"/>
+      <line x1="405" y1="222" x2="405" y2="240"/>
+      <line x1="410" y1="225" x2="410" y2="240"/>
+    </g>
+
+    <!-- Floor 4 Pillars -->
+    <rect x="80" y="254" width="22" height="66" fill="url(#concreteGrad)"/>
+    <rect x="155" y="254" width="22" height="66" fill="url(#concreteGrad)"/>
+    <rect x="235" y="254" width="22" height="66" fill="url(#concreteGrad)"/>
+    <rect x="315" y="254" width="22" height="66" fill="url(#concreteGrad)"/>
+    <rect x="395" y="254" width="22" height="66" fill="url(#concreteGrad)"/>
+    <rect x="445" y="254" width="18" height="66" fill="url(#concreteGrad)"/>
+
+    <!-- Slab 4 -->
+    <rect x="60" y="320" width="415" height="14" fill="url(#concreteGrad)"/>
+
+    <!-- Floor 3 Pillars -->
+    <rect x="80" y="334" width="22" height="66" fill="url(#concreteGrad)"/>
+    <rect x="155" y="334" width="22" height="66" fill="url(#concreteGrad)"/>
+    <rect x="235" y="334" width="22" height="66" fill="url(#concreteGrad)"/>
+    <rect x="315" y="334" width="22" height="66" fill="url(#concreteGrad)"/>
+    <rect x="395" y="334" width="22" height="66" fill="url(#concreteGrad)"/>
+    <rect x="445" y="334" width="18" height="66" fill="url(#concreteGrad)"/>
+    
+    <!-- Intermediate Brick Masonry / Scaffolding on Floor 3 -->
+    <rect x="182" y="354" width="48" height="46" fill="#b45309" opacity="0.6"/>
+    <line x1="182" y1="365" x2="230" y2="365" stroke="#fcd34d" stroke-width="1" opacity="0.4"/>
+    <line x1="182" y1="378" x2="230" y2="378" stroke="#fcd34d" stroke-width="1" opacity="0.4"/>
+    <line x1="182" y1="390" x2="230" y2="390" stroke="#fcd34d" stroke-width="1" opacity="0.4"/>
+
+    <!-- Slab 3 -->
+    <rect x="55" y="400" width="425" height="15" fill="url(#concreteGrad)"/>
+
+    <!-- Floor 2 Pillars -->
+    <rect x="80" y="415" width="22" height="65" fill="url(#concreteGrad)"/>
+    <rect x="155" y="415" width="22" height="65" fill="url(#concreteGrad)"/>
+    <rect x="235" y="415" width="22" height="65" fill="url(#concreteGrad)"/>
+    <rect x="315" y="415" width="22" height="65" fill="url(#concreteGrad)"/>
+    <rect x="395" y="415" width="22" height="65" fill="url(#concreteGrad)"/>
+    <rect x="450" y="415" width="20" height="65" fill="url(#concreteGrad)"/>
+
+    <!-- Slab 2 (Plinth/First floor) -->
+    <rect x="50" y="480" width="435" height="16" fill="url(#concreteGrad)"/>
+
+    <!-- Floor 1 (Ground Floor & Foundation Pillars) -->
+    <rect x="80" y="496" width="24" height="84" fill="url(#concreteGrad)"/>
+    <rect x="155" y="496" width="24" height="84" fill="url(#concreteGrad)"/>
+    <rect x="235" y="496" width="24" height="84" fill="url(#concreteGrad)"/>
+    <rect x="315" y="496" width="24" height="84" fill="url(#concreteGrad)"/>
+    <rect x="395" y="496" width="24" height="84" fill="url(#concreteGrad)"/>
+    <rect x="450" y="496" width="22" height="84" fill="url(#concreteGrad)"/>
+
+    <!-- Ground Level / Soil Barrier -->
+    <rect x="0" y="560" width="800" height="40" fill="#0f172a"/>
+    <line x1="0" y1="560" x2="800" y2="560" stroke="#f59e0b" stroke-width="2"/>
+  </g>
+
+  <!-- Golden Sunlight Overlay Effect across the Structure -->
+  <polygon points="400,200 800,260 800,580 300,580" fill="url(#warmSunlight)"/>
+
+  <!-- Construction Safety Green / Orange Scaffolding Netting Accent -->
+  <rect x="262" y="258" width="48" height="60" fill="#10b981" opacity="0.35"/>
+  <line x1="262" y1="270" x2="310" y2="270" stroke="#059669" stroke-width="1"/>
+  <line x1="262" y1="285" x2="310" y2="285" stroke="#059669" stroke-width="1"/>
+  <line x1="262" y1="300" x2="310" y2="300" stroke="#059669" stroke-width="1"/>
+
+  <!-- Modern Architectural Branding Badge in Bottom Left Corner -->
+  <g transform="translate(70, 500)">
+    <rect width="180" height="42" rx="6" fill="rgba(11, 23, 39, 0.85)" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="18" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="1">
+      RAMINENI SITES
+    </text>
+  </g>
+</svg>
+
