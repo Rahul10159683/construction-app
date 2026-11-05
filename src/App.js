@@ -70,7 +70,7 @@ function App() {
         onOpenConsultation={() => setIsConsultationModalOpen(true)}
       />
 
-      {/* Route-Based Page Navigation (Base path /ramireddy) */}
+      {/* Route-Based Page Navigation (Base path  /ramineni) */}
       <main className="main-content">
         <Routes>
           <Route
