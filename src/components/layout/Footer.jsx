@@ -24,7 +24,7 @@ const Footer = ({ setActivePage, onOpenConsultation }) => {
                 onError={(e) => {
                   if (!e.currentTarget.dataset.retried) {
                     e.currentTarget.dataset.retried = 'true';
-                    e.currentTarget.src = '/Ramineni_logo_horizontal_white.png';
+                    e.currentTarget.src = `${process.env.PUBLIC_URL || ''}/Ramineni_logo_horizontal.png`;
                     return;
                   }
                   setLogoError(true);
@@ -49,7 +49,7 @@ const Footer = ({ setActivePage, onOpenConsultation }) => {
                   R
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <span style={{ fontSize: '18px', fontWeight: '800', color: '#ffffff' }}>
+                  <span style={{ fontSize: '18px', fontWeight: '800', color: '#0b1727' }}>
                     RAMINENI
                   </span>
                   <span style={{ fontSize: '10px', fontWeight: '700', color: '#f59e0b' }}>
@@ -137,7 +137,7 @@ const Footer = ({ setActivePage, onOpenConsultation }) => {
             <div className="footer-contact-list">
               <div className="footer-contact-item">
                 <User className="footer-contact-icon" />
-                <span style={{ fontWeight: '600', color: '#f8fafc' }}>Ramineni Krishna Prasad</span>
+                <span style={{ fontWeight: '700', color: '#0b1727' }}>Ramineni Krishna Prasad</span>
               </div>
               <div className="footer-contact-item">
                 <Phone className="footer-contact-icon" />

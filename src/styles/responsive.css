@@ -78,12 +78,17 @@
   }
 
   .header-inner {
-    height: 74px;
+    height: 80px;
   }
 
   .brand-logo-img {
-    height: 48px;
-    max-width: 230px;
+    height: 58px;
+    max-width: 260px;
+  }
+
+  .footer-logo-img {
+    height: 58px;
+    max-width: 260px;
   }
 
   .hero-section {
@@ -376,12 +381,17 @@
    ========================================================== */
 @media (min-width: 1440px) {
   .header-inner {
-    height: 90px;
+    height: 100px;
   }
 
   .brand-logo-img {
-    height: 64px;
-    max-width: 320px;
+    height: 80px;
+    max-width: 380px;
+  }
+
+  .footer-logo-img {
+    height: 80px;
+    max-width: 380px;
   }
 
   .value-highlight-item {
@@ -399,12 +409,17 @@
 
 @media (min-width: 1920px) {
   .header-inner {
-    height: 94px;
+    height: 104px;
   }
 
   .brand-logo-img {
-    height: 68px;
-    max-width: 340px;
+    height: 86px;
+    max-width: 420px;
+  }
+
+  .footer-logo-img {
+    height: 86px;
+    max-width: 420px;
   }
 
   .desktop-nav {
