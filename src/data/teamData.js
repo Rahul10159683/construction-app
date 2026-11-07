@@ -4,14 +4,14 @@ export const teamData = [
     role: "Founder & Managing Director",
     experience: "Founder",
     bio: "Founded Ramineni Constructions with a clear vision: establishing a forward-thinking construction brand anchored in absolute transparency, modern civil engineering, and client-first commitment.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+    image: "Managing_partner.jpeg"
   },
   {
-    name: "Ar. Priya Nambiar",
+    name: "Samuel",
     role: "Principal Architect & Design Lead",
     experience: "Lead Architect",
     bio: "Passionate about contemporary bioclimatic architecture, functional modern floorplans, and sustainable building envelopes that maximize natural light and thermal comfort.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+    image: "SAM.jpeg"
   },
   {
     name: "Er. K. Rajeshwar Rao",
@@ -19,13 +19,36 @@ export const teamData = [
     experience: "Structural Engineering",
     bio: "Brings extensive academic and practical expertise in high-durability seismic-resilient RCC design, soil mechanics, and industrial steel framing compliance.",
     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80"
+  }
+];
+
+export const advisoryBoardData = [
+  {
+    name: "Jinka Durgaprasad",
+    role: "Strategic Financial Advisor",
+    secondaryTitle: "Financial Consultant",
+    focus: "Fiscal Governance & Capital Structuring",
+    bio: "Brings over 25 years of specialized expertise in corporate financial advisory, project funding, budget optimization, and fiscal governance for high-value infrastructure and residential projects.",
+    initials: "JD",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80"
   },
   {
-    name: "Sandeep V. Chari",
-    role: "Head of Project Execution & Quality",
-    experience: "Quality Operations",
-    bio: "Oversees stringent on-site testing protocols, material procurement from authorized manufacturers, and zero-compromise safety standards across every stage.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+    name: "Gurram Gurumurthi",
+    role: "Regulatory & Liaison Advisor",
+    secondaryTitle: "Government Relations Consultant",
+    focus: "Statutory Approvals & Compliance",
+    bio: "Distinguished advisor with decades of experience navigating statutory regulations, municipal sanctions, master plan clearances, and governmental department coordination across Telangana & AP.",
+    initials: "GG",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    name: "Thatisetty Tirupathaia",
+    role: "Head of Liaison & Security",
+    secondaryTitle: "Strategic Advisor – Public Relations & Security",
+    focus: "Security Governance & Stakeholder Liaison",
+    bio: "Directs strategic community liaison, stakeholder relations, and comprehensive site security frameworks, ensuring smooth, safe, and dispute-free operational governance across all active developments.",
+    initials: "TT",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80"
   }
 ];
 

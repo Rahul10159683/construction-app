@@ -41,13 +41,13 @@ const Header = ({ activePage, setActivePage, onOpenConsultation, onOpenMobileMen
         >
           {!logoError ? (
             <img
-              src={`${process.env.PUBLIC_URL || ''}/Ramineni_logo_horizontal.png`}
+              src={`${process.env.PUBLIC_URL || ''}/logo_taken.png`}
               alt="Ramineni Constructions"
               className="brand-logo-img"
               onError={(e) => {
                 if (!e.currentTarget.dataset.retried) {
                   e.currentTarget.dataset.retried = 'true';
-                  e.currentTarget.src = '/Ramineni_logo_horizontal.png';
+                  e.currentTarget.src = `${process.env.PUBLIC_URL || ''}/Ramineni_logo_horizontal.png`;
                   return;
                 }
                 setLogoError(true);

@@ -2,8 +2,17 @@ import React from 'react';
 import PageHero from '../components/common/PageHero';
 import CtaBanner from '../components/home/CtaBanner';
 import ApproachSection from '../components/home/ApproachSection';
-import { Target, Flag, ShieldCheck, Scale, Users, Leaf, Star } from 'lucide-react';
-import { teamData } from '../data/teamData';
+import { Target, Flag, ShieldCheck, Scale, Users, Leaf, Star, Award } from 'lucide-react';
+import { teamData, advisoryBoardData } from '../data/teamData';
+
+// Image path resolution helper for GitHub Pages, local dev, or custom subpaths
+const resolveImagePath = (src) => {
+  if (!src) return '';
+  if (src.startsWith('http://') || src.startsWith('https://')) return src;
+  const cleanPath = src.replace(/^\/?(construction-app\/)?/, '');
+  const publicUrl = process.env.PUBLIC_URL || '';
+  return `${publicUrl}/${cleanPath}`;
+};
 
 const AboutPage = ({ setActivePage, onOpenConsultation }) => {
   const coreValues = [
@@ -222,12 +231,80 @@ const AboutPage = ({ setActivePage, onOpenConsultation }) => {
             {teamData.map((member, idx) => (
               <div key={idx} className="team-card">
                 <div className="team-img-wrap">
-                  <img src={member.image} alt={member.name} className="team-img" loading="lazy" />
+                  <img
+                    src={resolveImagePath(member.image)}
+                    alt={member.name}
+                    className="team-img"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80";
+                    }}
+                  />
                 </div>
                 <div className="team-info">
                   <h4 className="team-name">{member.name}</h4>
                   <div className="team-role">{member.role}</div>
                   <p className="team-bio">{member.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Advisory Board Section */}
+      <section className="page-section-alt advisory-section">
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <span className="section-eyebrow" style={{ justifyContent: 'center' }}>
+              STRATEGIC COUNSEL & GOVERNANCE
+            </span>
+            <h2 className="section-title">Advisory Board</h2>
+            <p className="section-subtitle" style={{ margin: '0 auto', maxWidth: '680px' }}>
+              Distinguished industry veterans providing strategic foresight, fiscal governance, regulatory liaison, and operational security to Ramineni Constructions.
+            </p>
+          </div>
+
+          <div className="advisory-grid">
+            {advisoryBoardData && advisoryBoardData.map((advisor, idx) => (
+              <div key={idx} className="advisory-card">
+                <div className="advisory-card-top">
+                  <div className="advisory-avatar-wrap">
+                    <img
+                      src={resolveImagePath(advisor.image)}
+                      alt={advisor.name}
+                      className="advisory-avatar-img"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        const fallback = e.currentTarget.parentElement.querySelector('.advisory-avatar-fallback');
+                        if (fallback) fallback.style.display = 'flex';
+                      }}
+                    />
+                    <div className="advisory-avatar-fallback" style={{ display: 'none' }}>
+                      {advisor.initials}
+                    </div>
+                  </div>
+                  <div className="advisory-badge-pill">
+                    <Award size={13} />
+                    <span>Advisory Counsel</span>
+                  </div>
+                </div>
+
+                <div className="advisory-card-body">
+                  <h3 className="advisory-name">{advisor.name}</h3>
+                  <div className="advisory-role-title">{advisor.role}</div>
+                  {advisor.secondaryTitle && (
+                    <div className="advisory-secondary-title">{advisor.secondaryTitle}</div>
+                  )}
+
+                  <div className="advisory-focus-badge">
+                    <span className="focus-pulse-dot"></span>
+                    <span>{advisor.focus}</span>
+                  </div>
+
+                  <p className="advisory-bio">{advisor.bio}</p>
                 </div>
               </div>
             ))}
