@@ -18,13 +18,13 @@ const Footer = ({ setActivePage, onOpenConsultation }) => {
           <div className="footer-brand">
             {!logoError ? (
               <img
-                src={`${process.env.PUBLIC_URL || ''}/logo_taken.png`}
+                src={`${process.env.PUBLIC_URL || ''}/home_logo.png`}
                 alt="Ramineni Constructions"
                 className="footer-logo-img"
                 onError={(e) => {
                   if (!e.currentTarget.dataset.retried) {
                     e.currentTarget.dataset.retried = 'true';
-                    e.currentTarget.src = `${process.env.PUBLIC_URL || ''}/Ramineni_logo_horizontal.png`;
+                    e.currentTarget.src = `${process.env.PUBLIC_URL || ''}/logo_taken.png`;
                     return;
                   }
                   setLogoError(true);

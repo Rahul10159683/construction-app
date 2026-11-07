@@ -39,7 +39,7 @@ const HeroSection = ({ onNavigateServices, onNavigateContact }) => {
           {/* Right Hero Image: Construction Site with Tower Crane at Sunset */}
           <div className="hero-image-wrapper">
             <img
-              src={`${process.env.PUBLIC_URL || ''}/construction-site.svg`}
+              src={`${process.env.PUBLIC_URL || ''}/home_logo.png`}
               alt="Ramineni Constructions - Building Tomorrow's Landmarks"
               className="hero-image"
               loading="eager"
