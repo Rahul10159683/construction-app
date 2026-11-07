@@ -68,33 +68,58 @@ const AboutPage = ({ setActivePage, onOpenConsultation }) => {
             </p>
           </div>
 
-          <div className="team-grid">
-            {teamData.map((member, idx) => (
-              <div key={idx} className="team-card">
-                <div className={`team-img-wrap ${idx === 0 || member.objectFit === 'contain' ? 'team-img-wrap-contain' : ''}`}>
-                  <img
-                    src={resolveImagePath(member.image)}
-                    alt={member.name}
-                    className={`team-img ${idx === 0 || member.objectFit === 'contain' ? 'team-img-contain' : ''}`}
-                    style={{
-                      objectFit: (idx === 0 || member.objectFit === 'contain') ? 'contain' : (member.objectFit || 'cover'),
-                      objectPosition: member.objectPosition || 'center 10%'
-                    }}
-                    loading="lazy"
-                    onError={(e) => {
-                      e.currentTarget.onerror = null;
-                      e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80";
-                    }}
-                  />
-                </div>
-                <div className="team-info">
-                  <h4 className="team-name">{member.name}</h4>
-                  {member.role ? <div className="team-role">{member.role}</div> : null}
-                  <p className="team-bio">{member.bio}</p>
-                </div>
+          {teamData.length === 1 ? (
+            <div className="leadership-spotlight-card">
+              <div className="leadership-spotlight-img-wrap">
+                <img
+                  src={resolveImagePath(teamData[0].image)}
+                  alt={teamData[0].name}
+                  className="leadership-spotlight-img"
+                  loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80";
+                  }}
+                />
               </div>
-            ))}
-          </div>
+              <div className="leadership-spotlight-info">
+                <h3 className="leadership-spotlight-name">{teamData[0].name}</h3>
+                {teamData[0].role && (
+                  <div className="leadership-spotlight-role">{teamData[0].role}</div>
+                )}
+                <div className="leadership-spotlight-divider"></div>
+                <p className="leadership-spotlight-bio">{teamData[0].bio}</p>
+              </div>
+            </div>
+          ) : (
+            <div className="team-grid">
+              {teamData.map((member, idx) => (
+                <div key={idx} className="team-card">
+                  <div className={`team-img-wrap ${idx === 0 || member.objectFit === 'contain' ? 'team-img-wrap-contain' : ''}`}>
+                    <img
+                      src={resolveImagePath(member.image)}
+                      alt={member.name}
+                      className={`team-img ${idx === 0 || member.objectFit === 'contain' ? 'team-img-contain' : ''}`}
+                      style={{
+                        objectFit: (idx === 0 || member.objectFit === 'contain') ? 'contain' : (member.objectFit || 'cover'),
+                        objectPosition: member.objectPosition || 'center 10%'
+                      }}
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80";
+                      }}
+                    />
+                  </div>
+                  <div className="team-info">
+                    <h4 className="team-name">{member.name}</h4>
+                    {member.role ? <div className="team-role">{member.role}</div> : null}
+                    <p className="team-bio">{member.bio}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

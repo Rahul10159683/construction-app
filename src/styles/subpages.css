@@ -28,6 +28,120 @@
   margin-bottom: 16px;
 }
 
+/* Leadership Single Spotlight (Matches User Mockup) */
+.leadership-spotlight-card {
+  max-width: 880px;
+  margin: 36px auto 0 auto;
+  background-color: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(11, 23, 39, 0.05);
+  padding: 36px 42px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.leadership-spotlight-card:hover {
+  box-shadow: 0 16px 36px rgba(11, 23, 39, 0.08);
+  border-color: #cbd5e1;
+}
+
+.leadership-spotlight-img-wrap {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  border: 3px solid #f59e0b;
+  overflow: hidden;
+  background-color: #f8fafc;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+  flex-shrink: 0;
+}
+
+.leadership-spotlight-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.leadership-spotlight-card:hover .leadership-spotlight-img {
+  transform: scale(1.03);
+}
+
+.leadership-spotlight-info {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #e2e8f0;
+  padding-left: 36px;
+}
+
+.leadership-spotlight-name {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  color: #0b1727;
+  margin: 0;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+}
+
+.leadership-spotlight-role {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d97706;
+  margin-top: 6px;
+  letter-spacing: 0.2px;
+}
+
+.leadership-spotlight-divider {
+  width: 52px;
+  height: 3px;
+  background-color: #d97706;
+  border-radius: 2px;
+  margin: 14px 0 18px 0;
+}
+
+.leadership-spotlight-bio {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .leadership-spotlight-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 28px 22px;
+    gap: 24px;
+    justify-items: center;
+  }
+
+  .leadership-spotlight-img-wrap {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .leadership-spotlight-info {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .leadership-spotlight-divider {
+    margin: 12px auto 16px auto;
+  }
+
+  .leadership-spotlight-name {
+    font-size: 24px;
+  }
+}
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
