@@ -71,12 +71,15 @@ const AboutPage = ({ setActivePage, onOpenConsultation }) => {
           <div className="team-grid">
             {teamData.map((member, idx) => (
               <div key={idx} className="team-card">
-                <div className="team-img-wrap">
+                <div className={`team-img-wrap ${idx === 0 || member.objectFit === 'contain' ? 'team-img-wrap-contain' : ''}`}>
                   <img
                     src={resolveImagePath(member.image)}
                     alt={member.name}
-                    className="team-img"
-                    style={member.objectPosition ? { objectPosition: member.objectPosition } : {}}
+                    className={`team-img ${idx === 0 || member.objectFit === 'contain' ? 'team-img-contain' : ''}`}
+                    style={{
+                      objectFit: (idx === 0 || member.objectFit === 'contain') ? 'contain' : (member.objectFit || 'cover'),
+                      objectPosition: member.objectPosition || 'center 10%'
+                    }}
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.onerror = null;

@@ -320,8 +320,8 @@
    FOOTER (Light & High-Visibility Theme)
    ========================================================== */
 .site-footer {
-  background-color: #f8fafc;
-  color: #475569;
+  background-color: darkgrey;
+  color: white;
   padding-top: 64px;
   border-top: 2px solid #e2e8f0;
 }
@@ -340,6 +340,8 @@
 .footer-brand {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 18px;
 }
 
@@ -349,13 +351,16 @@
   max-width: clamp(280px, 22vw, 390px);
   object-fit: contain;
   display: block;
+  margin: 0 auto;
 }
 
 .footer-desc {
   font-size: 14px;
   line-height: 1.6;
-  color: #64748b;
+  color: #475569;
   max-width: 320px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .footer-column-title {
@@ -491,4 +496,3 @@
 .footer-legal-link:hover {
   color: #0b1727;
 }
-

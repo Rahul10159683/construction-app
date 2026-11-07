@@ -56,12 +56,26 @@
   position: relative;
 }
 
+.team-img-wrap-contain {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .team-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 8%;
   transition: transform 0.35s ease;
+}
+
+.team-img-contain {
+  object-fit: contain !important;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
 }
 
 .team-card:hover .team-img {
