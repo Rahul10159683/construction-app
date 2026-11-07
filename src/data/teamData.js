@@ -1,24 +1,27 @@
 export const teamData = [
   {
     name: "Ramineni Krishna Prasad",
-    role: "Founder & Managing Director",
+    role: "Managing Partner & Authorized Signatory",
     experience: "Founder",
     bio: "Founded Ramineni Constructions with a clear vision: establishing a forward-thinking construction brand anchored in absolute transparency, modern civil engineering, and client-first commitment.",
-    image: "Managing_partner.jpeg"
+    image: "Managing_partner.jpeg",
+    objectPosition: "center 5%"
   },
   {
     name: "Samuel",
-    role: "Principal Architect & Design Lead",
-    experience: "Lead Architect",
+    role: "",
+    experience: "",
     bio: "Passionate about contemporary bioclimatic architecture, functional modern floorplans, and sustainable building envelopes that maximize natural light and thermal comfort.",
-    image: "SAM.jpeg"
+    image: "SAM.jpeg",
+    objectPosition: "center 12%"
   },
   {
     name: "Er. K. Rajeshwar Rao",
     role: "Chief Structural Consultant",
     experience: "Structural Engineering",
     bio: "Brings extensive academic and practical expertise in high-durability seismic-resilient RCC design, soil mechanics, and industrial steel framing compliance.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80"
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80",
+    objectPosition: "center 15%"
   }
 ];
 

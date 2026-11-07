@@ -55,6 +55,106 @@ const AboutPage = ({ setActivePage, onOpenConsultation }) => {
         }}
       />
 
+      {/* Leadership Team */}
+      <section className="page-section">
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '36px' }}>
+            <span className="section-eyebrow" style={{ justifyContent: 'center' }}>
+              LEADERSHIP & EXPERTISE
+            </span>
+            <h2 className="section-title">The Engineering Minds Behind Ramineni</h2>
+            <p className="section-subtitle" style={{ margin: '0 auto' }}>
+              Qualified structural engineers, architects, and operations specialists dedicated to executing your vision.
+            </p>
+          </div>
+
+          <div className="team-grid">
+            {teamData.map((member, idx) => (
+              <div key={idx} className="team-card">
+                <div className="team-img-wrap">
+                  <img
+                    src={resolveImagePath(member.image)}
+                    alt={member.name}
+                    className="team-img"
+                    style={member.objectPosition ? { objectPosition: member.objectPosition } : {}}
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80";
+                    }}
+                  />
+                </div>
+                <div className="team-info">
+                  <h4 className="team-name">{member.name}</h4>
+                  {member.role ? <div className="team-role">{member.role}</div> : null}
+                  <p className="team-bio">{member.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Advisory Board Section */}
+      <section className="page-section-alt advisory-section">
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <span className="section-eyebrow" style={{ justifyContent: 'center' }}>
+              STRATEGIC COUNSEL & GOVERNANCE
+            </span>
+            <h2 className="section-title">Advisory Board</h2>
+            <p className="section-subtitle" style={{ margin: '0 auto', maxWidth: '680px' }}>
+              Distinguished industry veterans providing strategic foresight, fiscal governance, regulatory liaison, and operational security to Ramineni Constructions.
+            </p>
+          </div>
+
+          <div className="advisory-grid">
+            {advisoryBoardData && advisoryBoardData.map((advisor, idx) => (
+              <div key={idx} className="advisory-card">
+                <div className="advisory-card-top">
+                  <div className="advisory-avatar-wrap">
+                    <img
+                      src={resolveImagePath(advisor.image)}
+                      alt={advisor.name}
+                      className="advisory-avatar-img"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        const fallback = e.currentTarget.parentElement.querySelector('.advisory-avatar-fallback');
+                        if (fallback) fallback.style.display = 'flex';
+                      }}
+                    />
+                    <div className="advisory-avatar-fallback" style={{ display: 'none' }}>
+                      {advisor.initials}
+                    </div>
+                  </div>
+                  <div className="advisory-badge-pill">
+                    <Award size={13} />
+                    <span>Advisory Counsel</span>
+                  </div>
+                </div>
+
+                <div className="advisory-card-body">
+                  <h3 className="advisory-name">{advisor.name}</h3>
+                  <div className="advisory-role-title">{advisor.role}</div>
+                  {advisor.secondaryTitle && (
+                    <div className="advisory-secondary-title">{advisor.secondaryTitle}</div>
+                  )}
+
+                  <div className="advisory-focus-badge">
+                    <span className="focus-pulse-dot"></span>
+                    <span>{advisor.focus}</span>
+                  </div>
+
+                  <p className="advisory-bio">{advisor.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* Heritage & Overview */}
       <section className="page-section">
         <div className="container">
@@ -214,103 +314,6 @@ const AboutPage = ({ setActivePage, onOpenConsultation }) => {
       {/* Construction Approach Section */}
       <ApproachSection onOpenConsultation={onOpenConsultation} />
 
-      {/* Leadership Team */}
-      <section className="page-section">
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-            <span className="section-eyebrow" style={{ justifyContent: 'center' }}>
-              LEADERSHIP & EXPERTISE
-            </span>
-            <h2 className="section-title">The Engineering Minds Behind Ramineni</h2>
-            <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Qualified structural engineers, architects, and operations specialists dedicated to executing your vision.
-            </p>
-          </div>
-
-          <div className="team-grid">
-            {teamData.map((member, idx) => (
-              <div key={idx} className="team-card">
-                <div className="team-img-wrap">
-                  <img
-                    src={resolveImagePath(member.image)}
-                    alt={member.name}
-                    className="team-img"
-                    loading="lazy"
-                    onError={(e) => {
-                      e.currentTarget.onerror = null;
-                      e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80";
-                    }}
-                  />
-                </div>
-                <div className="team-info">
-                  <h4 className="team-name">{member.name}</h4>
-                  <div className="team-role">{member.role}</div>
-                  <p className="team-bio">{member.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Strategic Advisory Board Section */}
-      <section className="page-section-alt advisory-section">
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <span className="section-eyebrow" style={{ justifyContent: 'center' }}>
-              STRATEGIC COUNSEL & GOVERNANCE
-            </span>
-            <h2 className="section-title">Advisory Board</h2>
-            <p className="section-subtitle" style={{ margin: '0 auto', maxWidth: '680px' }}>
-              Distinguished industry veterans providing strategic foresight, fiscal governance, regulatory liaison, and operational security to Ramineni Constructions.
-            </p>
-          </div>
-
-          <div className="advisory-grid">
-            {advisoryBoardData && advisoryBoardData.map((advisor, idx) => (
-              <div key={idx} className="advisory-card">
-                <div className="advisory-card-top">
-                  <div className="advisory-avatar-wrap">
-                    <img
-                      src={resolveImagePath(advisor.image)}
-                      alt={advisor.name}
-                      className="advisory-avatar-img"
-                      loading="lazy"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        const fallback = e.currentTarget.parentElement.querySelector('.advisory-avatar-fallback');
-                        if (fallback) fallback.style.display = 'flex';
-                      }}
-                    />
-                    <div className="advisory-avatar-fallback" style={{ display: 'none' }}>
-                      {advisor.initials}
-                    </div>
-                  </div>
-                  <div className="advisory-badge-pill">
-                    <Award size={13} />
-                    <span>Advisory Counsel</span>
-                  </div>
-                </div>
-
-                <div className="advisory-card-body">
-                  <h3 className="advisory-name">{advisor.name}</h3>
-                  <div className="advisory-role-title">{advisor.role}</div>
-                  {advisor.secondaryTitle && (
-                    <div className="advisory-secondary-title">{advisor.secondaryTitle}</div>
-                  )}
-
-                  <div className="advisory-focus-badge">
-                    <span className="focus-pulse-dot"></span>
-                    <span>{advisor.focus}</span>
-                  </div>
-
-                  <p className="advisory-bio">{advisor.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <CtaBanner onNavigateContact={() => {
         setActivePage('contact');

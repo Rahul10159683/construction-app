@@ -50,15 +50,22 @@
 }
 
 .team-img-wrap {
-  height: 240px;
+  height: 310px;
   overflow: hidden;
   background-color: #f1f5f9;
+  position: relative;
 }
 
 .team-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center 8%;
+  transition: transform 0.35s ease;
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.02);
 }
 
 .team-info {
@@ -692,6 +699,10 @@ textarea.form-control {
 @media (max-width: 600px) {
   .team-grid {
     grid-template-columns: 1fr;
+  }
+
+  .team-img-wrap {
+    height: 320px;
   }
 
   .gallery-grid {
