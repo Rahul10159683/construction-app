@@ -18,7 +18,7 @@ const Footer = ({ setActivePage, onOpenConsultation }) => {
           <div className="footer-brand">
             {!logoError ? (
               <img
-                src={`${process.env.PUBLIC_URL || ''}/home_logo.png`}
+                src={`${process.env.PUBLIC_URL || ''}/logo_taken.png`}
                 alt="Ramineni Constructions"
                 className="footer-logo-img"
                 onError={(e) => {

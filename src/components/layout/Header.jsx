@@ -41,7 +41,7 @@ const Header = ({ activePage, setActivePage, onOpenConsultation, onOpenMobileMen
         >
           {!logoError ? (
             <img
-              src={`${process.env.PUBLIC_URL || ''}/home_logo.png`}
+              src={`${process.env.PUBLIC_URL || ''}/logo_taken.png`}
               alt="Ramineni Constructions"
               className="brand-logo-img"
               onError={(e) => {
