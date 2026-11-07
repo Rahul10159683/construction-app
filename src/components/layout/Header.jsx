@@ -21,7 +21,7 @@ const Header = ({ activePage, setActivePage, onOpenConsultation, onOpenMobileMen
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
     { id: 'services', label: 'Services' },
-    { id: 'future-projects', label: 'Future Projects' },
+    // { id: 'future-projects', label: 'Future Projects' },
     { id: 'contact', label: 'Contact' },
   ];
 

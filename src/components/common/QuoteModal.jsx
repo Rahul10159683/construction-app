@@ -122,10 +122,10 @@ const QuoteModal = ({ isOpen, onClose }) => {
                     value={formData.projectType}
                     onChange={handleChange}
                   >
-                    <option value="residential">Residential (Villa / House / Apartment)</option>
-                    <option value="commercial">Commercial (Office / Retail / Complex)</option>
-                    <option value="industrial">Industrial (Warehouse / Factory)</option>
-                    <option value="renovation">Renovation & Remodeling</option>
+                    <option value="residential-apartments">Residential Apartments & Communities</option>
+                    <option value="industrial-infrastructure">Industrial Infrastructure</option>
+                    <option value="commercial-hubs">Commercial Hubs</option>
+                    <option value="tristate-execution">Tristate Execution Support</option>
                   </select>
                 </div>
               </div>

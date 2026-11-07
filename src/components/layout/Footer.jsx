@@ -107,25 +107,25 @@ const Footer = ({ setActivePage, onOpenConsultation }) => {
               <li>
                 <button className="footer-link-btn" onClick={() => handleNavClick('services')}>
                   <ChevronRight size={14} className="footer-link-arrow" />
-                  <span>Residential Construction</span>
+                  <span>Residential Apartments & Communities</span>
                 </button>
               </li>
               <li>
                 <button className="footer-link-btn" onClick={() => handleNavClick('services')}>
                   <ChevronRight size={14} className="footer-link-arrow" />
-                  <span>Commercial Construction</span>
+                  <span>Industrial Infrastructure</span>
                 </button>
               </li>
               <li>
                 <button className="footer-link-btn" onClick={() => handleNavClick('services')}>
                   <ChevronRight size={14} className="footer-link-arrow" />
-                  <span>Industrial Construction</span>
+                  <span>Commercial Hubs</span>
                 </button>
               </li>
               <li>
                 <button className="footer-link-btn" onClick={() => handleNavClick('services')}>
                   <ChevronRight size={14} className="footer-link-arrow" />
-                  <span>Renovation & Remodeling</span>
+                  <span>Tristate Execution Support</span>
                 </button>
               </li>
             </ul>

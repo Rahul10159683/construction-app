@@ -10,7 +10,7 @@ import QuoteModal from './components/common/QuoteModal';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
-import FutureProjectsPage from './pages/FutureProjectsPage';
+// import FutureProjectsPage from './pages/FutureProjectsPage';
 import ContactPage from './pages/ContactPage';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
   const getActivePage = (pathname) => {
     if (pathname.startsWith('/about')) return 'about';
     if (pathname.startsWith('/services')) return 'services';
-    if (pathname.startsWith('/future-projects')) return 'future-projects';
+    // if (pathname.startsWith('/future-projects')) return 'future-projects';
     if (pathname.startsWith('/contact')) return 'contact';
     return 'home';
   };
@@ -41,7 +41,7 @@ function App() {
       home: '/',
       about: '/about',
       services: '/services',
-      'future-projects': '/future-projects',
+      // 'future-projects': '/future-projects',
       contact: '/contact',
     };
     const targetRoute = routeMap[pageId] || '/';
@@ -100,7 +100,7 @@ function App() {
               />
             }
           />
-          <Route
+          {/* <Route
             path="/future-projects"
             element={
               <FutureProjectsPage
@@ -108,7 +108,7 @@ function App() {
                 onOpenConsultation={() => setIsConsultationModalOpen(true)}
               />
             }
-          />
+          /> */}
           <Route
             path="/contact"
             element={

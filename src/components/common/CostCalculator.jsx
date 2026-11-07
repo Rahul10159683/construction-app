@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { Calculator, ArrowRight } from 'lucide-react';
 
 const CostCalculator = ({ onOpenQuote }) => {
-  const [projectType, setProjectType] = useState('residential-villa');
-  const [areaSqFt, setAreaSqFt] = useState(3500);
+  const [projectType, setProjectType] = useState('residential-apartments');
+  const [areaSqFt, setAreaSqFt] = useState(5000);
   const [qualityTier, setQualityTier] = useState('premium');
 
   const baseRates = {
-    'residential-villa': 2600,
-    'residential-house': 2100,
-    'commercial-complex': 3200,
-    'industrial-warehouse': 1800,
-    'renovation': 1200
+    'residential-apartments': 2400,
+    'industrial-infrastructure': 1900,
+    'commercial-hubs': 3100,
+    'tristate-execution': 2200
   };
 
   const tierMultipliers = {
@@ -21,11 +20,10 @@ const CostCalculator = ({ onOpenQuote }) => {
   };
 
   const timelineMap = {
-    'residential-villa': '12 - 16 Months',
-    'residential-house': '9 - 12 Months',
-    'commercial-complex': '18 - 24 Months',
-    'industrial-warehouse': '8 - 12 Months',
-    'renovation': '3 - 6 Months'
+    'residential-apartments': '12 - 24 Months',
+    'industrial-infrastructure': '8 - 16 Months',
+    'commercial-hubs': '14 - 24 Months',
+    'tristate-execution': 'Turnkey Lifecycle'
   };
 
   const ratePerSqFt = Math.round(baseRates[projectType] * tierMultipliers[qualityTier]);
@@ -79,11 +77,10 @@ const CostCalculator = ({ onOpenQuote }) => {
               value={projectType}
               onChange={(e) => setProjectType(e.target.value)}
             >
-              <option value="residential-villa">Residential Custom Villa / Duplex</option>
-              <option value="residential-house">Independent House / Multi-floor</option>
-              <option value="commercial-complex">Commercial Office / Retail Hub</option>
-              <option value="industrial-warehouse">Industrial PEB Warehouse / Factory</option>
-              <option value="renovation">Renovation & Structural Modernization</option>
+              <option value="residential-apartments">Residential Apartments & Communities</option>
+              <option value="industrial-infrastructure">Industrial Infrastructure (PEB & Factories)</option>
+              <option value="commercial-hubs">Commercial Hubs (Offices & Retail)</option>
+              <option value="tristate-execution">Tristate Execution & Turnkey Projects</option>
             </select>
           </div>
 
@@ -186,6 +183,4 @@ const CostCalculator = ({ onOpenQuote }) => {
     </div>
   );
 };
-
 export default CostCalculator;
-

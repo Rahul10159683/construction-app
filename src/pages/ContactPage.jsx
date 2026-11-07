@@ -189,11 +189,10 @@ const ContactPage = ({ setActivePage, onOpenQuote }) => {
                           value={formData.subject}
                           onChange={handleChange}
                         >
-                          <option value="residential">Residential Villa / Home</option>
-                          <option value="commercial">Commercial Complex / Office</option>
-                          <option value="industrial">Industrial Warehouse / Plant</option>
-                          <option value="renovation">Renovation & Modernization</option>
-                          <option value="architectural">Architectural 3D Planning</option>
+                          <option value="residential-apartments">Residential Apartments & Communities</option>
+                          <option value="industrial-infrastructure">Industrial Infrastructure</option>
+                          <option value="commercial-hubs">Commercial Hubs</option>
+                          <option value="tristate-execution">Tristate Execution Support</option>
                         </select>
                       </div>
                     </div>

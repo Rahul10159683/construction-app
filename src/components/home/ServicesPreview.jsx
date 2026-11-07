@@ -1,12 +1,12 @@
 import React from 'react';
-import { Home, Building2, Factory, Wrench, ArrowRight } from 'lucide-react';
+import { Building2, Factory, Briefcase, Compass, ArrowRight } from 'lucide-react';
 import { servicesData } from '../../data/servicesData';
 
 const iconMap = {
-  Home,
   Building2,
   Factory,
-  Wrench
+  Briefcase,
+  Compass
 };
 
 const ServicesPreview = ({ onNavigateServices }) => {
@@ -20,7 +20,7 @@ const ServicesPreview = ({ onNavigateServices }) => {
 
         <div className="services-grid">
           {servicesData.map((service) => {
-            const IconComponent = iconMap[service.iconName] || Home;
+            const IconComponent = iconMap[service.iconName] || Building2;
 
             return (
               <div
@@ -54,5 +54,4 @@ const ServicesPreview = ({ onNavigateServices }) => {
     </section>
   );
 };
-
 export default ServicesPreview;

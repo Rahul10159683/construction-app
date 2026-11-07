@@ -1,78 +1,78 @@
 export const servicesData = [
   {
-    id: "residential-construction",
-    title: "Residential Construction",
-    subtitle: "Independent houses, villas and apartments.",
-    iconName: "Home",
-    badge: "Core Expertise",
-    heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-    description: "From custom independent houses and luxury private villas to modern multi-family apartment projects, we engineer dream residences with world-class engineering integrity, Vastu compliance, and premium finishes.",
+    id: "residential-apartments-communities",
+    title: "Residential Apartments & Communities",
+    subtitle: "High-quality, modern multi-storey apartment complexes and premium residential layouts.",
+    iconName: "Building2",
+    badge: "Residential",
+    heroImage: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+    description: "High-quality, modern multi-storey apartment complexes and premium residential layouts designed for contemporary urban living.",
     features: [
-      "Custom Architectural Planning & 3D Vastu Compliant Layouts",
-      "RCC Framed Structures with Fe 550D TMT Rebar & Ultratech Concrete",
-      "Premium Marble, Italian Tile, and Hardwood Flooring Installations",
-      "Concealed Electrical (Polycab/Finolex) & Plumbing (Astral/Kohler)",
-      "Smart Home Automation, Energy-Efficient Glass & Solar Integration",
-      "Strict GHMC/HMDA Municipal Approval & Soil Bearing Test Compliance"
+      "Modern Multi-Storey RCC Framed Apartment Complexes & Towers",
+      "Integrated Gated Community Layouts with Complete Infrastructure",
+      "Bioclimatic Architectural Planning for Maximum Sunlight & Ventilation",
+      "Clubhouse Facilities, Landscaped Greens & Premium Community Amenities",
+      "Certified Fe 550D TMT Reinforcement & Quality-Tested RMC Concrete",
+      "Comprehensive Municipal Compliance, RERA Sanctions & Title Approvals"
     ],
-    pricingRange: "₹2,100 – ₹3,800 per sq.ft",
-    timelineAverage: "10 – 16 Months"
+    pricingRange: "₹2,200 – ₹4,200 per sq.ft",
+    timelineAverage: "12 – 24 Months"
   },
   {
-    id: "commercial-construction",
-    title: "Commercial Construction",
-    subtitle: "Office spaces, retail and commercial buildings.",
-    iconName: "Building2",
+    id: "commercial-hubs",
+    title: "Commercial Hubs",
+    subtitle: "Corporate office infrastructure, retail spaces and mixed-use complexes.",
+    iconName: "Briefcase",
     badge: "Commercial",
     heroImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-    description: "Delivering modern commercial hubs, corporate office spaces, and high-footfall retail complexes designed for optimum spatial efficiency, structural longevity, and maximum investment returns.",
+    description: "Corporate office infrastructure, retail spaces, and mixed-use complexes engineered to drive business growth.",
     features: [
-      "Large-span column-free office floor plates with flexible layouts",
-      "Structural Glazing, Curtain Wall Facades & ACP Cladding",
-      "Central HVAC, Mechanical Ventilation & Multi-tier Basement Parking",
-      "NFPA & NBC Compliant Fire Hydrant, Sprinkler & Smoke Extraction Systems",
-      "High-speed Destination Control Elevators (Otis/Schindler)",
-      "Comprehensive IGBC / GRIHA Green Building Certification Support"
+      "Grade-A Corporate Office Towers & High-Density Tech Parks",
+      "Modern Retail Spaces, High-Footfall Showrooms & Shopping Centers",
+      "Energy-Efficient Structural Glazing, Double-Skin Facades & ACP",
+      "Centralized HVAC, Smart Building Management & High-Speed Elevators",
+      "Multi-Level Basement Parking with Automated Guidance Systems",
+      "NBC & NFPA Compliant Fire Hydrant, Sprinkler & Safety Automation"
     ],
-    pricingRange: "₹2,800 – ₹4,500 per sq.ft",
-    timelineAverage: "14 – 22 Months"
+    pricingRange: "₹2,900 – ₹4,800 per sq.ft",
+    timelineAverage: "14 – 24 Months"
   },
   {
-    id: "industrial-construction",
-    title: "Industrial Construction",
-    subtitle: "Warehouses, factories and utility buildings.",
+    id: "industrial-infrastructure",
+    title: "Industrial Infrastructure",
+    subtitle: "Heavy engineering sheds, factories, manufacturing setups and logistical warehouses.",
     iconName: "Factory",
-    badge: "Heavy Duty",
+    badge: "Heavy Engineering",
     heroImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-    description: "Turnkey execution of Pre-Engineered Steel Buildings (PEB), modern manufacturing plants, logistics warehouses, and utility buildings engineered for 24/7 industrial performance.",
+    description: "Comprehensive execution of heavy engineering sheds, factories, manufacturing setups, and logistical warehouses tailored to exact technical specifications.",
     features: [
-      "Heavy Structural Steel Fabrication & Pre-Engineered Building (PEB) Erection",
-      "Laser-leveled FM2/FM3 Super-flat Industrial Flooring (High Point Loads)",
-      "Automated Hydraulic Dock Levellers & Insulated Overhead Sectional Doors",
-      "Effluent Treatment Plants (ETP) & Heavy Freight Access Infrastructure",
-      "High-bay LED Illumination & Thermal Insulated Sandwich Roof Panels",
-      "Complete Compliance with Factory Inspectorate & Pollution Control Board"
+      "Pre-Engineered Steel Buildings (PEB) & Heavy Structural Steel Framing",
+      "Precision Engineering Manufacturing Facilities & Assembly Plants",
+      "Laser-Leveled FM2/FM3 Super-Flat Industrial Concrete Flooring",
+      "Automated Hydraulic Docking Bays & Heavy Freight Transport Corridors",
+      "Factory Inspectorate, PCB & Industrial Fire Safety Standards",
+      "Effluent Treatment Plants (ETP) & High-Tension Substation Integration"
     ],
-    pricingRange: "₹1,600 – ₹2,900 per sq.ft",
-    timelineAverage: "8 – 14 Months"
+    pricingRange: "₹1,800 – ₹3,200 per sq.ft",
+    timelineAverage: "8 – 16 Months"
   },
   {
-    id: "renovation-remodeling",
-    title: "Renovation & Remodeling",
-    subtitle: "Upgrades, extensions and modernization works.",
-    iconName: "Wrench",
-    badge: "Modernization",
-    heroImage: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
-    description: "Breathe fresh life into existing spaces with our comprehensive structural retrofitting, interior transformations, façade modernizations, and vertical/horizontal space expansions.",
+    id: "tristate-execution-support",
+    title: "Tristate Execution Support",
+    subtitle: "Seamless end-to-end site management, swift municipal sanctions and robust financial structuring across South India.",
+    iconName: "Compass",
+    badge: "Turnkey Execution",
+    heroImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+    description: "Seamless end-to-end site management, swift municipal sanctions, and robust financial structuring across our entire operational footprint in South India.",
     features: [
-      "Carbon Fiber Wrapping & Structural Jacketing for Beam/Column Strengthening",
-      "Complete MEP (Mechanical, Electrical, Plumbing) Modernization",
-      "Exterior Elevation Facelift with Modern Louvers, Glass & Stone Cladding",
-      "Interior Spatial Reconfiguration, Modular Kitchens & Luxury Bathrooms",
-      "Waterproofing & Damp-proof Membrane Installations with 10-Yr Guarantee",
-      "Acoustic Insulation & Noise Reduction Retrofits for Urban Properties"
+      "Operational Footprint Across Telangana, Andhra Pradesh & Regional South India",
+      "Fast-Track Municipal Sanctions, DTCP / HMDA Master Approvals & Clearances",
+      "Strategic Financial Advisory, Capital Optimization & Detailed BOQ Audits",
+      "Dedicated On-Site Engineering Superintendence & Quality Assurance",
+      "Statutory Liaison, Environmental Approvals & Fire Department NOCs",
+      "Transparent Milestone Reporting, Direct Lead Engineer Oversight"
     ],
-    pricingRange: "₹950 – ₹2,200 per sq.ft",
-    timelineAverage: "2 – 6 Months"
+    pricingRange: "Turnkey Project Scope",
+    timelineAverage: "Full Project Lifecycle"
   }
 ];
